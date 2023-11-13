@@ -3,7 +3,9 @@ src = "src"
 out = "out"
 libs = ["lib"]
 remappings = [
-  '@chainlink/contracts=lib/chainlink-brownie-contracts/contracts',
+  '@chainlink/contracts/src/v0.8/interfaces/LinkTokenInterface.sol=lib/chainlink-brownie-contracts/contracts/src/v0.8/interfaces/LinkTokenInterface.sol',
+  '@chainlink/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol',
+  '@chainlink/contracts/src/v0.8/vrf/VRFConsumerBaseV2.sol=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/v0.8/VRFConsumerBaseV2.sol',
   '@openzeppelin/contracts=lib/openzeppelin-contracts/contracts',
   '@thirdweb-dev/contracts=lib/contracts/contracts',
 ]
