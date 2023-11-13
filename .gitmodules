@@ -10,3 +10,6 @@
 [submodule "lib/contracts"]
 	path = lib/contracts
 	url = https://github.com/thirdweb-dev/contracts
+[submodule "lib/foundry-chainlink-toolkit"]
+	path = lib/foundry-chainlink-toolkit
+	url = https://github.com/smartcontractkit/foundry-chainlink-toolkit
