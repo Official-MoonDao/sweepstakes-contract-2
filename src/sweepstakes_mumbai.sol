@@ -37,7 +37,7 @@ contract TicketToSpace2 is ERC721A, Ownable, VRFConsumerBaseV2 {
     mapping(uint256 => address)  
         public winners;
 
-    uint256 public winnersCount = 5;
+    uint256 public winnersCount = 10;
 
     string private _nftName = "Ticket to Space NFT 2";
     string private _image = "ipfs://Qmba3umb3db7DqCA19iRSSbtzv9nYUmP8Cibo5QMkLpgpP";

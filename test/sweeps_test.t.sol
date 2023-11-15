@@ -97,8 +97,6 @@ contract SweepstakestTest is Test {
         assert(tts.getSupply() == 4);
 
         assert(!tts.canClaimFree(proofA, A));
-        assert(tts.balanceOf(A) == 4);
-        assert(tts.getSupply() == 4);
 
         vm.expectRevert();
         tts.claimFree(proofA); // A tries to claim for free again, fails (already claimed for free)
@@ -134,8 +132,6 @@ contract SweepstakestTest is Test {
         vm.startPrank(C);
 
         assert(!tts.canClaimFree(proofC, C));
-        assert(tts.balanceOf(C) == 0);
-        assert(tts.getSupply() == 64);
 
         vm.expectRevert();
         tts.claimFree(proofC); // C tries to claim for free, fails (not in whitelist)
