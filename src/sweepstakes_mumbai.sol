@@ -168,7 +168,7 @@ contract TicketToSpace2 is ERC721A, Ownable, VRFConsumerBaseV2 {
                 merkleProof,
                 previousEntrantsMerkleRoot,
                 keccak256(abi.encodePacked(receiver))
-            ) && balanceOf(receiver) == 0;
+            ) && _getAux(receiver) == 0;
     }
 
     function claimFree(bytes32[] calldata merkleProof) public {
@@ -179,6 +179,7 @@ contract TicketToSpace2 is ERC721A, Ownable, VRFConsumerBaseV2 {
         address claimAddress = msg.sender;
         require(canClaimFree(merkleProof, claimAddress), "Address cannot claim for free, or has already claimed");
         _safeMint(claimAddress, 1);
+        _setAux(claimAddress, 1);
     }
 
     function mint(uint256 count) public payable {
